@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Utility
@@ -23,12 +24,17 @@ namespace Utility
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public static bool Exists( string path )
+        public static bool FindFile( string path, out string foundPath )
         {
+            foundPath = string.Empty;
             bool exists = File.Exists(path);
-            // If not in specified directory, try parent directory
-            if ( !exists )
+            if ( exists )
             {
+                foundPath = Path.GetFullPath(path);
+            }
+            else             
+            {
+                
                 // Does the directory exist?
                 //Directory.Exists();
 

@@ -54,7 +54,7 @@
   <ItemGroup>
     <Compile Include="JosephusProblemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="UtilityFileTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JosephusProblem\JosephusProblem.csproj">

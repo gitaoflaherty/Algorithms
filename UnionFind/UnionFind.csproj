@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectedComponent.cs" />
+    <Compile Include="ConnectedComponentCollection.cs" />
     <Compile Include="UF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,9 +50,15 @@
       <Project>{9902319f-1350-4f89-8b08-1dde75d7c855}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{5bff3e13-ea15-4f9a-b0a2-0e81e6c0e355}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Simulation Data\NetworkA.csv" />
+    <None Include="Simulation Data\NetworkA.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
